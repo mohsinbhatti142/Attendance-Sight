@@ -1,0 +1,48 @@
+# Core Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# Database
+sqlalchemy[asyncio]==2.0.36
+aiosqlite==0.22.1
+asyncpg==0.30.0
+alembic==1.14.1
+
+# Redis & Task Queue
+redis==5.2.1
+celery==5.4.0
+
+# AI / Face Recognition
+insightface==0.7.3
+albumentations==1.3.1
+onnxruntime-gpu==1.20.0; sys_platform == "win32"
+onnxruntime==1.20.1; sys_platform != "win32"
+nvidia-cuda-runtime-cu12==12.6.77; sys_platform == "win32"
+nvidia-cublas-cu12==12.6.4.1; sys_platform == "win32"
+nvidia-cudnn-cu12==9.3.0.75; sys_platform == "win32"
+nvidia-cufft-cu12==11.2.6.59; sys_platform == "win32"
+opencv-python==4.10.0.84
+numpy>=1.24.0,<2.0.0
+scikit-learn==1.6.1
+faiss-cpu==1.9.0.post1
+
+# Image Processing
+Pillow==11.1.0
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+pywebview==5.4
+pydantic[email]==2.10.5
+pydantic-settings==2.7.1
+
+# Utilities
+python-dotenv==1.0.1
+loguru==0.7.3
+aiofiles==24.1.0
+httpx==0.28.1
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0

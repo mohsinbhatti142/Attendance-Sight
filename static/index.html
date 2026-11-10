@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance-Sight | Local Attendance</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/static/attendsight-icon.svg?v=20261110a" type="image/svg+xml">
+
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- React 18 & ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <!-- Babel for JSX transformation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    html, body, button, input, select, textarea {
+      font-family: "Inter", sans-serif;
+    }
+    body, input, select, textarea { font-weight: 400; }
+    button.font-semibold, button.font-bold { font-weight: 500; }
+    h1.font-bold, h2.font-bold, h3.font-bold { font-weight: 700; }
+
+    /* Custom Sleek Scrollbar for Light Theme */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .interactive-card {
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .interactive-card:hover {
+      transform: translateY(-2px);
+      border-color: #bae6fd;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .interactive-card { transition: none; }
+      .interactive-card:hover { transform: none; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen antialiased overflow-x-hidden font-sans font-normal">
+  <!-- React Root Container -->
+  <div id="root"></div>
+
+  <!-- Modular React Components -->
+  <script type="text/babel" src="/static/js/components/Navbar.js?v=20261111b"></script>
+  <script type="text/babel" src="/static/js/components/KioskSplitScreen.js?v=20261111b"></script>
+  <script type="text/babel" src="/static/js/components/MultiStepEnrollModal.js?v=20261105h"></script>
+  <script type="text/babel" src="/static/js/components/EmployeeDirectory.js?v=20261111b"></script>
+  <script type="text/babel" src="/static/js/components/PayrollSummary.js?v=20261111b"></script>
+  <script type="text/babel" src="/static/js/components/AttendanceCardModal.js?v=20261105f"></script>
+  <script type="text/babel" src="/static/js/components/CctvConfigModal.js?v=20261110e"></script>
+  <script type="text/babel" src="/static/js/components/SetupWizard.js?v=20261110a"></script>
+  <script type="text/babel" src="/static/js/components/AccountSettingsModal.js?v=20261110c"></script>
+  <script type="text/babel" src="/static/js/components/AuthScreen.js?v=20261112a"></script>
+  <script type="text/babel" src="/static/js/components/DailyRecords.js?v=20261111b"></script>
+  <script type="text/babel" src="/static/js/components/ShiftRules.js?v=20261111b"></script>
+
+  <!-- Master Application Script -->
+  <script type="text/babel" src="/static/js/app.js?v=20261112a"></script>
+</body>
+</html>
